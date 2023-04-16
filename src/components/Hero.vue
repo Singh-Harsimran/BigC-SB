@@ -1,7 +1,7 @@
 <template>
   <div
     v-editable="blok"
-    class="h-screen relative z-1 flex items-end justify-center pb-14"
+    class="h-screen min-h-[400px] max-h-[90vh] relative z-1 flex items-end justify-center pb-14"
   >
     <img
       :src="image"

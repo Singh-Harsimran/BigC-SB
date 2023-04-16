@@ -1,7 +1,6 @@
 <script setup>
 import { useStoryblok } from '@storyblok/vue';
 import { ref, computed } from 'vue';
-import Page404 from './404.vue';
 
 let { pathname } = location;
 let language = pathname.split('/')[1].replace('/', '');
@@ -41,6 +40,22 @@ const currentView = computed(() => {
 let currentView = routes[currentPath] || currentPath.slice(1);
 //console.log(currentPath, currentView);
 
+let siteConfigContent = ref();
+let siteConfig = await useStoryblok('site-config', {
+    version: 'draft',
+    language: activeLanguage,
+});
+siteConfigContent.value = siteConfig.story;
+
+let header = computed(() => {
+  let headerData = {};
+  if(siteConfigContent.value.logo){ headerData.logo = siteConfigContent.value.logo; }
+  if(siteConfigContent.value.alternatelogo){ headerData.alternatelogo = siteConfigContent.value.alternatelogo; }
+  if(siteConfigContent.value.menu){ headerData.menu = siteConfigContent.value.menu; }
+  return headerData
+});
+console.log(header)
+
 let story = null;
 try {
   story = await useStoryblok(currentView, {
@@ -57,5 +72,18 @@ try {
 </script>
 
 <template>
+  <Announcement
+    :text="siteConfig.content.AnnouncementText"
+    :link="siteConfig.content.AnnouncementLink"
+    :bg="siteConfig.content.AnnouncementBarColor"
+    :color="siteConfig.content.AnnouncementTextColor"
+    />
+  <Header 
+    :page="currentPath"
+    :logo="siteConfig.content.HeaderLogo" 
+    :logoAlternate="siteConfig.content.HeaderLogoAlternate" 
+    :menu="siteConfig.content.HeaderMenu" 
+    />
   <StoryblokComponent v-if="story" :blok="story.content" />
+  <Footer :footer="siteConfig.content.FooterColumns"/>
 </template>

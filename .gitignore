@@ -10,3 +10,5 @@ localhost-key.pem
 localhost.pem
 .vercel
 .DS_Store
+vite.config.js
+*.pem

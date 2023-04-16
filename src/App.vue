@@ -23,7 +23,6 @@ const currentView = computed(() => {
 });
 //console.log(currentView);
 </script>
-
 <template>
   <Suspense>
     <template #default>

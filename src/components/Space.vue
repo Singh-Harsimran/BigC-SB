@@ -2,7 +2,7 @@
   <div
     v-editable="blok"
     :style="`height:${blok.Height ? blok.Height : 0}px;`"
-  ></div>
+  ></div> 
 </template>
 
 <script setup>

@@ -12,7 +12,6 @@ onMounted(() => {
   useStoryblokBridge(state.story.id, (story) => (state.story = story));
 });
 </script>
-
 <template>
   <StoryblokComponent v-if="story" :blok="story.content" />
 </template>

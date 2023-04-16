@@ -3,7 +3,7 @@
     <StoryblokComponent
       v-for="blok in blok.body"
       :blok="blok"
-      :key="blok._uid"
+      :key="blok._uid" 
     />
   </div>
 </template>

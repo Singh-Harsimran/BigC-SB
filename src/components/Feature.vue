@@ -5,7 +5,7 @@
     :class="{ 'md:flex-row-reverse': imageOnRight }"
   >
     <div class="basis-1/2">
-      <img :src="image" class="" />
+      <img :src="image" class="w-full h-auto" />
     </div>
     <div class="relative basis-1/2 text-black py-10 px-6 md:px-10 lg:px-16 xl:px-20 flex "
     :class="imageOnRight? 'md:justify-end' :'md:justify-start'">
