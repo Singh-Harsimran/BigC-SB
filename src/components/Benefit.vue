@@ -1,6 +1,6 @@
 <template>
     <div v-editable="blok" class="relative h-[500px] xl:h-[600px] group overflow-hidden flex items-end">
-        <img loading="lazy" class="absolute w-full h-full inset-0 object-fit object-cover scale-100 group-hover:scale-105 transition-all duration-500" v-f="blok.Image.filename" :src="blok.Image.filename" :alt="blok.Image.alt" :name="blok.Image.name" :title="blok.Image.title"/>
+        <img loading="lazy" class="absolute w-full h-full inset-0 object-fit object-cover scale-100 group-hover:scale-105 transition-all duration-500" v-if="blok.Image.filename" :src="blok.Image.filename" :alt="blok.Image.alt" :name="blok.Image.name" :title="blok.Image.title"/>
         <div class="absolute inset-0 bg-black/30"></div>
         <div class="relative text-white px-10 pb-16">
             <div class="mb-2 text-sm uppercase font-bold tracking-widest" v-text="blok.SubHeading"></div>

@@ -17,6 +17,7 @@ import Heading from './components/Heading.vue';
 import RichText from './components/RichText.vue';
 import Link from './components/Link.vue';
 import Benefit from './components/Benefit.vue';
+import Image from './components/Image.vue';
 
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
@@ -48,5 +49,6 @@ app.component('Heading', Heading);
 app.component('RichText', RichText);
 app.component('Link', Link);
 app.component('Benefit', Benefit);
+app.component('Image', Image);
 
 app.mount('#app');

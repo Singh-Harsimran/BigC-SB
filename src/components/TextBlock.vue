@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="px-6 py-14" :class="blok.TextAlign">
+  <div v-editable="blok" class="px-6 py-14" :class="blok.Class, blok.TextAlign">
     <div class="mb-2 text-sm uppercase font-bold tracking-widest">
       {{ blok.SubHeading }}
     </div>
