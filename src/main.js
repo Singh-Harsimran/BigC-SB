@@ -26,7 +26,7 @@ import Announcement from './components/Announcement.vue';
 const app = createApp(App);
 
 app.use(StoryblokVue, {
-  accessToken: 'ucd3BuwBFrjaVaS228NECQtt',
+  accessToken: 'n4HyFrrsuX1CcPVyzembQgtt',
   use: [apiPlugin],
 });
 
