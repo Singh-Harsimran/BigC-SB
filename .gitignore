@@ -12,4 +12,3 @@ localhost.pem
 .DS_Store
 vite.config.js
 *.pem
-package*json
