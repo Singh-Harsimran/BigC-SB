@@ -14,7 +14,7 @@
         </button>
         <div class="fixed inset-0 z-10 xl:static xl:!visible" :class="mobileNavOpen ? 'visible':'invisible'">
             <div class="block absolute inset-0 bg-black/30 xl:hidden" v-on:click="toggleMobileNav()"></div>
-            <div class="relative py-6 px-6 bg-white h-screen w-[90vw] shadow-lg xl:shadow-none xl:h-auto xl:w-auto xl:p-0 transition-all duration-500 xl:!translate-x-0 xl:bg-transparent"  :class="mobileNavOpen ? 'translate-x-0':'-translate-x-full'">
+            <div class="relative py-6 px-6 bg-white h-screen w-[90vw] shadow-lg xl:shadow-none xl:h-auto xl:w-auto xl:p-0 transition-transform duration-500 xl:!translate-x-0 xl:bg-transparent"  :class="mobileNavOpen ? 'translate-x-0':'-translate-x-full'">
                 <button class=" xl:hidden" v-on:click="toggleMobileNav()">
                     <svg class="w-4 h-4" role="presentation" viewBox="0 0 16 14">
                         <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
