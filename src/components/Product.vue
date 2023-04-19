@@ -27,7 +27,6 @@
     </div>
   </div>
 </template>
-
 <script setup>
 defineProps({ blok: Object });
 const goToImg = (e,id) => {
